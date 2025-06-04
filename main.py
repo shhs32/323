@@ -1,10 +1,21 @@
-#Посчитайте манулов от 10 до 100
-for i in range (1,101):
-    if i==1:
-        print(i,"манул")
-    elif i % 10 == 2 or i % 10 ==3 or i % 10 == 4:
-        print (i, "манула")
-    elif i==21 or i==31 or i==41 or i==41 or i==51 or i==61 or i==71 or i==81 or i==91:
-         print (i, "манул")
-    else:
-        print(i,"манулов")
+questions = "Какой сегодня месяц?"
+right_answer = "июнь"
+
+print(questions)
+user_answer = input()
+attempts = 1
+lives=3
+
+while user_answer != right_answer and lives > 0:
+    lives -= 1
+    print("Wrong try again", attempts)
+    user_answer = input()
+    attempts += 1
+
+if user_answer == right_answer:
+    print("Well done")
+    print("Attempts", attempts)
+else:
+    print("Too bad.")
+#Посчитать количество попыток в конце
+questions = "Где вы сейчас?"
